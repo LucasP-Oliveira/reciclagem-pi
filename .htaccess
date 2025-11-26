@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Se o arquivo existir com .php, acessa ele internamente
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+# Força erro 404 se não existir
+ErrorDocument 404 /index.php

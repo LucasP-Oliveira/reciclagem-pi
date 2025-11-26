@@ -1,23 +1,19 @@
 <?php
+// Configuração da página
 $base_path = ".";
 $pagina_atual = "home";
+$page_title = "Reciclagem - Início";
+$page_desc = "Guia completo sobre reciclagem e sustentabilidade.";
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reciclagem</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="shortcut icon" href="./images/favicon/raciclagem-favicon.png" type="image/x-icon">
+  <?php include 'includes/header.php'; ?>
 </head>
 <body>
   
-  <?php include 'includes/header.php'; ?>
-
   <section class="destaque">
-    <img src="images/lixeiras-de-reciclagem.webp" alt="Lixeiras de reciclagem" class="destaque-img">
+    <img src="images/lixeiras-de-reciclagem.webp" alt="Lixeiras de reciclagem" class="destaque-img" loading="lazy">
     <div class="sobreposicao"></div>
     <div class="container conteudo-destaque">
       <h1>Cada atitude conta.</h1>
@@ -26,7 +22,7 @@ $pagina_atual = "home";
   </section>
 
   <div class="anuncio-topo">
-    <a href="https://fatecid.com.br/cursos/index.php" target="_blank" style="text-decoration: none; color: inherit;">
+    <a href="https://fatecid.com.br/cursos/index.php" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
       <img src="./images/Anuncio/41.jpg" style="max-width: 100%;" alt="Vestibular Fatec">
     </a>
   </div>
@@ -50,61 +46,70 @@ $pagina_atual = "home";
                 <td>Azul</td>
                 <td>Papel/Papelão</td>
                 <td>Jornais, revistas, caixas</td>
-                <td><a href="pages/materials/papel.php" class="btn">Ver Mais</a></td>
+                <td><a href="pages/material?tipo=papel" class="btn">Ver Mais</a></td>
               </tr>
+
               <tr class="vermelho">
                 <td>Vermelho</td>
                 <td>Plástico</td>
                 <td>Garrafas, embalagens</td>
-                <td><a href="pages/materials/plastico.php" class="btn">Ver Mais</a></td>
+                <td><a href="pages/material?tipo=plastico" class="btn">Ver Mais</a></td>
               </tr>
+
               <tr class="verde">
                 <td>Verde</td>
                 <td>Vidro</td>
                 <td>Garrafas, potes</td>
-                <td><a href="pages/materials/vidro.php" class="btn">Ver Mais</a></td>
+                <td><a href="pages/material?tipo=vidro" class="btn">Ver Mais</a></td>
               </tr>
+
               <tr class="amarelo">
                 <td>Amarelo</td>
                 <td>Metal</td>
                 <td>Latas, tampas</td>
-                <td><a href="pages/materials/metal.php" class="btn">Ver Mais</a></td>
+                <td><a href="pages/material?tipo=metal" class="btn">Ver Mais</a></td>
               </tr>
+
               <tr class="marrom">
                 <td>Marrom</td>
                 <td>Orgânico</td>
                 <td>Restos de alimentos</td>
-                <td><a href="pages/materials/organico.php" class="btn">Ver Mais</a></td>
+                <td><a href="pages/material?tipo=organico" class="btn">Ver Mais</a></td>
               </tr>
+
               <tr class="cinza">
                 <td>Cinza</td>
                 <td>Não reciclável</td>
                 <td>Papel higiênico, adesivos</td>
-                <td><a href="pages/materials/naoReciclavel.php" class="btn">Ver Mais</a></td>
+                <td><a href="pages/material?tipo=naoReciclavel" class="btn">Ver Mais</a></td>
               </tr>
+
               <tr class="laranja">
                 <td>Laranja</td>
                 <td>Perigosos</td>
                 <td>Pilhas, baterias</td>
-                <td><a href="pages/materials/perigosos.php" class="btn">Ver Mais</a></td>
+                <td><a href="pages/material?tipo=perigosos" class="btn">Ver Mais</a></td>
               </tr>
+
               <tr class="preto">
                 <td>Preto</td>
                 <td>Madeira</td>
                 <td>Móveis, paletes</td>
-                <td><a href="pages/materials/madeira.php" class="btn">Ver Mais</a></td>
+                <td><a href="pages/material?tipo=madeira" class="btn">Ver Mais</a></td>
               </tr>
+
               <tr class="branco">
                 <td>Branco</td>
                 <td>Saúde</td>
                 <td>Agulhas, luvas</td>
-                <td><a href="pages/materials/ambulatorios.php" class="btn">Ver Mais</a></td>
+                <td><a href="pages/material?tipo=ambulatorios" class="btn">Ver Mais</a></td>
               </tr>
+
               <tr class="roxo">
                 <td>Roxo</td>
                 <td>Radioativos</td>
                 <td>Materiais contaminados</td>
-                <td><a href="pages/materials/radioativos.php" class="btn">Ver Mais</a></td>
+                <td><a href="pages/material?tipo=radioativos" class="btn">Ver Mais</a></td>
               </tr>
             </tbody>
           </table>
@@ -142,6 +147,5 @@ $pagina_atual = "home";
   </section>
 
   <?php include 'includes/footer.php'; ?>
-  <script src="js/script.js"></script>
 </body>
 </html>
